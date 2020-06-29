@@ -19,3 +19,6 @@ The sample shows how to read driver's license information from PDF417 using Dyna
 ## Reference
 - https://www.aamva.org/DL-ID-Card-Design-Standard/
 - https://github.com/Dynamsoft/javascript-barcode/tree/master/example/web/decode-driver-license-for-AAMVA
+
+## Blog
+[Reading Driver’s License Information from PDF417 in JavaScript](https://www.dynamsoft.com/codepool/javascript-driver-license-pdf417-web.html)
