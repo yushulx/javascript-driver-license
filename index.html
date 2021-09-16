@@ -12,24 +12,24 @@
     </div>
     <div id="div-licenseInfo"></div>
     <!--
-        Please visit https://www.dynamsoft.com/CustomerPortal/Portal/TrialLicense.aspx to get trial license.
+        Please visit https://www.dynamsoft.com/customer/license/trialLicense/?product=dbr to get trial license.
     -->
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.4.0-v1/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
     <script src="driverlicense.js"></script>
     <script>
         let scanner = null;
         (async ()=>{
-            scanner = await Dynamsoft.BarcodeScanner.createInstance();
+            scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
             await scanner.setUIElement(document.getElementById('div-video-container'));
 
             let runtimeSettings = await scanner.getRuntimeSettings();
-            runtimeSettings.barcodeFormatIds = Dynamsoft.EnumBarcodeFormat.BF_PDF417;
+            runtimeSettings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_PDF417;
             runtimeSettings.LocalizationModes = [2,8,0,0,0,0,0,0];
             runtimeSettings.deblurLevel = 2;
             await scanner.updateRuntimeSettings(runtimeSettings);
 
             scanner.onFrameRead = results => console.log(results);
-            scanner.onUnduplicatedRead = txt => {
+            scanner.onUnduplicatedRead = (txt, result) => {
 
                 // Get infos
                 let licenseInfo = parseDriverLicense(txt);
