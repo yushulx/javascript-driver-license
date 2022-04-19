@@ -16,6 +16,9 @@ The sample shows how to read and extract driver's license information from PDF41
 
     ![JavaScript driver's license](https://www.dynamsoft.com/codepool/wp-content/uploads/2020/06/javascript-driver-license.png)
 
+## Online Demo
+[https://yushulx.me/javascript-driver-license/](https://yushulx.me/javascript-driver-license/)
+
 ## Reference
 - https://www.aamva.org/DL-ID-Card-Design-Standard/
 - https://github.com/Dynamsoft/javascript-barcode/tree/master/example/web/decode-driver-license-for-AAMVA
